@@ -6,10 +6,11 @@ from sqlalchemy.orm.session import Session
 from sqlalchemy.sql.functions import mode
 from app import models, schemas
 from .database import get_db
+from .config import settings
 
-SECRET_KEY = "01d69b3050caabc423860c49e27451b383316e1b4908c7ee441266f77862415f"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+SECRET_KEY = settings.secret_key
+ALGORITHM = settings.algorithm
+ACCESS_TOKEN_EXPIRE_MINUTES = settings.access_token_expire_minutes
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
