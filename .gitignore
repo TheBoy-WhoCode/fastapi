@@ -3,3 +3,5 @@
 /app/__pycache__
 /routers/__pycache__
 .env 
+/alembic/__pycache__
+/alembic/versions/__pycache__
